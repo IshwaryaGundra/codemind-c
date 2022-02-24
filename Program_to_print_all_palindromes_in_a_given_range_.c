@@ -1,20 +1,19 @@
 #include<stdio.h>
 int main()
 {
-   int n,rem, rev, temp, start, end;
+   int num, rem, reverse_num, temp, start, end;
    scanf("%d%d",&start,&end);
-   for(n=start;n<=end;n++)
+   for(num=start;num<=end;num++)
    {
-      temp=n;
-      rev=0;
-      while(temp)
-      {
+      temp=num;
+      reverse_num=0;
+      while(temp){
          rem=temp%10;
          temp=temp/10;
-         rev=rev*10+rem;
+         reverse_num=reverse_num*10+rem;
       }
-      if(n==rev)
-         printf("%d ",n);
+      if(num==reverse_num)
+         printf("%d ",num);
    }
    return 0;
 }
