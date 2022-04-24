@@ -1,22 +1,34 @@
 #include<stdio.h>
+int isneon(int n,int k,int s)
+{
+    int d;
+    k=n*n;
+    while(k>0)
+    {
+        d=k%10;
+        s=s+d;
+        k=k/10;
+    }
+    if(n==s)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+    
+}
 int main()
 {
-    int n,m,i,k,sum=0;
+    int n,k,s=0;
     scanf("%d",&n);
-    k=n*n;
-    while(k>0)    
+    if(isneon(n,k,s))
     {
-        
-    m=k%10;    
-    sum=sum+m;    
-    k=k/10;    
-    }
-    if(sum==n)
-    {  
         printf("Neon Number");
     }
-     else
+    else
     {
-     printf("Not Neon Number");
+        printf("Not Neon Number");
     }
 }
