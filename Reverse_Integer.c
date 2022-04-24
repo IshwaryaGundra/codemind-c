@@ -1,14 +1,22 @@
 #include<stdio.h>
-int  main()
+int rev(int n,int sum)
 {
-    int n,r,s=0,i;
-    scanf("%d",&n);
-    i=n;
+    int d;
     while(n!=0)
     {
-        r=n%10;
-        n=n/10;
-        s=s*10+r;
+       d=n%10;
+       sum=sum*10+d;
+       n=n/10;
     }
-    printf("%d",s);
+    return sum;
+    if(sum<-2147483648||sum>2147483647)
+    {
+        return 0;
+    }
+}
+int main()
+{
+    int n,sum=0;
+    scanf("%d",&n);
+    printf("%d",rev(n,sum));
 }
