@@ -1,20 +1,30 @@
 #include<stdio.h>
-int main()
+int abun(int n)
 {
-    int n,sum=0,i;
-    scanf("%d",&n);
+    int i,s=0;
     for(i=1;i<n;i++)
     {
         if(n%i==0)
         {
-            sum=sum+i;
+            s=s+i;
         }
     }
-    if(sum>n)
+    if(n>s)
+    {
+        return 0;
+    }
+    else
+    return 1;
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    if(abun(n))
     {
         printf("True");
     }
-    else 
+    else
     {
         printf("False");
     }
