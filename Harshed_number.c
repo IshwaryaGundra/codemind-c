@@ -1,23 +1,34 @@
 #include<stdio.h>
-int main()
+int isharsnum(int n)
 {
-    int n,d,s=0,t=0,k,r=0;
-    scanf("%d",&n);
-    k=n/2;
-    t=n;
-    while(n>0)
+    int num, d,s=0;
+    num=n;
+    while(num>0)
     {
-        d=n%10;
-        n=n/10;
-        r=r+d;
-        s=k*r;
+    d=num%10;
+    s=s+d;
+    num=num/10;
     }
-    if(t%r==0||t/r==0)
+    if(n%s==0)
     {
-        printf("True");
+        return 1;
     }
     else
     {
-        printf("False");
+        return 0;
     }
+        
+}
+int main()
+{
+    int n;
+    scanf("%d",&n);
+   if(isharsnum(n))
+   {
+       printf("True");
+   }
+   else
+   {
+       printf("False");
+   }
 }
